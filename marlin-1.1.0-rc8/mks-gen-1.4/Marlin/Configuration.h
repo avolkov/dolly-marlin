@@ -317,6 +317,8 @@
   #define  DEFAULT_Ki 0.51
   #define  DEFAULT_Kd 40.61
 
+  // My settings 24V part colling M106 S127
+
   //If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
