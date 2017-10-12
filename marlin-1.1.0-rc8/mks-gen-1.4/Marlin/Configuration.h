@@ -313,9 +313,9 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // My settings, no part cooling
-  #define  DEFAULT_bedKp 60.63
-  #define  DEFAULT_bedKi 0.91
-  #define  DEFAULT_bedKd 1013.15
+  #define  DEFAULT_Kp 9.13
+  #define  DEFAULT_Ki 0.51
+  #define  DEFAULT_Kd 40.61
 
   // My settings 24V part colling M106 S127
 
@@ -369,17 +369,17 @@
 #if ENABLED(PIDTEMPBED)
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
-  #define SLOW_PWM_HEATERS
+  //#define SLOW_PWM_HEATERS
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
   //#define  DEFAULT_bedKp 10.00
   //#define  DEFAULT_bedKi .023F
   //#define  DEFAULT_bedKd 305.4
-  //  M303 E-1 S100 C8
+  //  M303 E-1 S95 C8
   // 24 V system  calibration
-  #define  DEFAULT_bedKp 58.62
-  #define  DEFAULT_bedKi 3.19
-  #define  DEFAULT_bedKd 269.40
+  #define  DEFAULT_bedKp 60.63
+  #define  DEFAULT_bedKi 0.91
+  #define  DEFAULT_bedKd 1013.15
 
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
