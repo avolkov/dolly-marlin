@@ -313,9 +313,9 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // My settings, no part cooling
-  #define  DEFAULT_Kp 9.13
-  #define  DEFAULT_Ki 0.51
-  #define  DEFAULT_Kd 40.61
+  #define  DEFAULT_bedKp 60.63
+  #define  DEFAULT_bedKi 0.91
+  #define  DEFAULT_bedKd 1013.15
 
   // My settings 24V part colling M106 S127
 
