@@ -508,14 +508,17 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 1600, 180 }
+ /* TR8 -- 8mm pitch */
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 180 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 5 , 25 }
+
+ /* Bump feedrate for TR8 */
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 50 , 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
