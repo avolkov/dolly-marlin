@@ -508,14 +508,17 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 4000, 180 }
+ /* TR8 -- 8mm pitch */
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 180 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 3, 25 }
+
+ /* Bump feedrate for TR8 */
+#define DEFAULT_MAX_FEEDRATE          { 200, 200, 50 , 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -767,9 +770,9 @@
 #define Z_MAX_POS 180
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
-#define MIN_SOFTWARE_ENDSTOPS
+//#define MIN_SOFTWARE_ENDSTOPS
 // If enabled, axes won't move above MAX_POS in response to movement commands.
-#define MAX_SOFTWARE_ENDSTOPS
+//#define MAX_SOFTWARE_ENDSTOPS
 
 /**
  * Filament Runout Sensor
