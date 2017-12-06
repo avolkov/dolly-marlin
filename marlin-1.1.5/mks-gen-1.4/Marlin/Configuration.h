@@ -861,9 +861,9 @@
   // Set the boundaries for probing (where the probe can reach).x
 
   #define LEFT_PROBE_BED_POSITION 30
-  #define RIGHT_PROBE_BED_POSITION 180
+  #define RIGHT_PROBE_BED_POSITION 200
   #define FRONT_PROBE_BED_POSITION 30
-  #define BACK_PROBE_BED_POSITION 190
+  #define BACK_PROBE_BED_POSITION 200
 
 
   // The Z probe minimum outer margin (to validate G29 parameters).
@@ -983,7 +983,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (30*60)
+#define HOMING_FEEDRATE_Z  (20*60)
 
 //=============================================================================
 //============================= Additional Features ===========================
