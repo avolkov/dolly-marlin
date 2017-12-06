@@ -772,7 +772,7 @@
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 //#define MIN_SOFTWARE_ENDSTOPS
 // If enabled, axes won't move above MAX_POS in response to movement commands.
-//#define MAX_SOFTWARE_ENDSTOPS
+#define MAX_SOFTWARE_ENDSTOPS
 
 /**
  * Filament Runout Sensor
