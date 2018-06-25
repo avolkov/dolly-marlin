@@ -767,7 +767,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 190
+#define Z_MAX_POS 197
 
 // If enabled, axes won't move below MIN_POS in response to movement commands.
 //#define MIN_SOFTWARE_ENDSTOPS
@@ -862,7 +862,7 @@
 
   #define LEFT_PROBE_BED_POSITION 30
   #define RIGHT_PROBE_BED_POSITION 200
-  #define FRONT_PROBE_BED_POSITION 30
+  #define FRONT_PROBE_BED_POSITION 43
   #define BACK_PROBE_BED_POSITION 200
 
 
@@ -1006,7 +1006,7 @@
 //
 // Host Keepalive
 //
-// When enabled Marlin will send a busy status message to the host
+// When enabled Marlin will send a busy status  sage to the host
 // every couple of seconds when it can't accept commands.
 //
 #define HOST_KEEPALIVE_FEATURE        // Disable this if your host doesn't like keepalive messages
