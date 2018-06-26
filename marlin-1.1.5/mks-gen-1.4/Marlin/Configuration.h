@@ -509,7 +509,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
  /* TR8 -- 8mm pitch */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 155 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 144 }
 
 /**
  * Default Max Feed Rate (mm/s)
