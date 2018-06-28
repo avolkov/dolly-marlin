@@ -346,17 +346,17 @@
   //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
-  #define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
+  //#define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
+  #define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  #define  DEFAULT_Kp 11.07
-  #define  DEFAULT_Ki 0.74
-  #define  DEFAULT_Kd 41.19
+  #define  DEFAULT_Kp 17.91
+  #define  DEFAULT_Ki 1.44
+  #define  DEFAULT_Kd 55.75
 
 #endif // PIDTEMP
 
@@ -383,6 +383,7 @@
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
 #if ENABLED(PIDTEMPBED)
+  #define  SLOW_PWM_HEATERS
   #define  DEFAULT_bedKp 82.65
   #define  DEFAULT_bedKi 3.98
   #define  DEFAULT_bedKd 428.56
