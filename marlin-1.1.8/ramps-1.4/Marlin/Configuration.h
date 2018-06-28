@@ -372,7 +372,7 @@
 // If your configuration is significantly different than this and you don't understand the issues involved, you probably
 // shouldn't use bed PID until someone else verifies your hardware works.
 // If this is enabled, find your own PID constants below.
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -384,9 +384,9 @@
 
 #if ENABLED(PIDTEMPBED)
   #define  SLOW_PWM_HEATERS
-  #define  DEFAULT_bedKp 82.65
-  #define  DEFAULT_bedKi 3.98
-  #define  DEFAULT_bedKd 428.56
+  #define  DEFAULT_bedKp 65.14
+  #define  DEFAULT_bedKi 4.39
+  #define  DEFAULT_bedKd 241.45
 #endif // PIDTEMPBED
 
 // @section extruder
