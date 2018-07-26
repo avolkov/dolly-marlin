@@ -351,13 +351,9 @@
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
   #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
-
-  // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-
-  #define  DEFAULT_Kp 17.91
-  #define  DEFAULT_Ki 1.44
-  #define  DEFAULT_Kd 55.75
-
+  #define  DEFAULT_Kp 19.31
+  #define  DEFAULT_Ki 1.58
+  #define  DEFAULT_Kd 58.91
 #endif // PIDTEMP
 
 //===========================================================================
@@ -383,10 +379,9 @@
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
 #if ENABLED(PIDTEMPBED)
-  #define  SLOW_PWM_HEATERS
-  #define  DEFAULT_bedKp 65.14
-  #define  DEFAULT_bedKi 4.39
-  #define  DEFAULT_bedKd 241.45
+  #define  DEFAULT_bedKp 249.23
+  #define  DEFAULT_bedKi 47.54
+  #define  DEFAULT_bedKd 326.68
 #endif // PIDTEMPBED
 
 // @section extruder
