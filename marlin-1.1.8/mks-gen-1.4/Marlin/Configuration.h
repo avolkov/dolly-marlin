@@ -350,10 +350,15 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   //24V heater; tuned with M303 E0 S200 C8
+  // knockoff e3dv6
+  // #define  DEFAULT_Kp 22.54
+  // #define  DEFAULT_Ki 1.80
+  // #define  DEFAULT_Kd 70.62
 
-  #define  DEFAULT_Kp 22.54
-  #define  DEFAULT_Ki 1.80
-  #define  DEFAULT_Kd 70.62
+  // e3dv6 with a sock
+  #define  DEFAULT_Kp 22.24
+  #define  DEFAULT_Ki 1.69
+  #define  DEFAULT_Kd 73.35
 
 #endif // PIDTEMP
 
@@ -385,9 +390,15 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
   // 24 V system  calibration
   //  M303 E-1 S95 C8
-  #define  DEFAULT_bedKp 60.63
-  #define  DEFAULT_bedKi 1.80
-  #define  DEFAULT_bedKd 1013.15
+  // Kapton tape
+  //#define  DEFAULT_bedKp 60.63
+  //#define  DEFAULT_bedKi 1.80
+  //#define  DEFAULT_bedKd 1013.15
+
+  // Wanhao (teflon?)
+  #define  DEFAULT_bedKp 328.08
+  #define  DEFAULT_bedKi 58.90
+  #define  DEFAULT_bedKd 456.89
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -769,7 +780,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+#define Z_MAX_POS 210
 
 /**
  * Software Endstops
@@ -881,8 +892,8 @@
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE     0.4   // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT    0.2   // (mm) Default layer height for the G26 Mesh Validation Tool.
-    #define MESH_TEST_HOTEND_TEMP   205.0   // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
-    #define MESH_TEST_BED_TEMP       60.0   // (°C) Default bed temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_HOTEND_TEMP   220.0   // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_BED_TEMP       65.0   // (°C) Default bed temperature for the G26 Mesh Validation Tool.
   #endif
 
 #endif
@@ -1014,8 +1025,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_X_POINT 108    // X point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_Y_POINT 108    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
