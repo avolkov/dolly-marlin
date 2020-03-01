@@ -907,7 +907,7 @@
 // Set the boundaries for probing (where the probe can reach).
 #define LEFT_PROBE_BED_POSITION 30
 #define RIGHT_PROBE_BED_POSITION 190
-#define FRONT_PROBE_BED_POSITION 55
+#define FRONT_PROBE_BED_POSITION 60
 #define BACK_PROBE_BED_POSITION 190
 
 // The Z probe minimum outer margin (to validate G29 parameters).
@@ -973,7 +973,7 @@
 //=================================== Mesh ==================================
 //===========================================================================
 
-#define MESH_INSET 10          // Mesh inset margin on print area
+#define MESH_INSET 15          // Mesh inset margin on print area
 #define GRID_MAX_POINTS_X 3    // Don't use more than 7 points per axis, implementation limited.
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
