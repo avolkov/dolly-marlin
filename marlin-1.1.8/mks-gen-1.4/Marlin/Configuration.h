@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2019 July 29 / mks-gen-1.4 )" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2020 March 02 / mks-gen-1.4 )" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -685,12 +685,12 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Speed for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (HOMING_FEEDRATE_Z / 1.5)
 
 // The number of probes to perform at each point.
 //   Set to 2 for a fast/slow probe, using the second probe result.
 //   Set to 3 or more for slow probes, averaging the results.
-#define MULTIPLE_PROBING 2
+#define MULTIPLE_PROBING 3
 
 /**
    Z probes require clearance when deploying, stowing, and moving between
@@ -906,7 +906,7 @@
 
 // Set the boundaries for probing (where the probe can reach).
 #define LEFT_PROBE_BED_POSITION 30
-#define RIGHT_PROBE_BED_POSITION 190
+#define RIGHT_PROBE_BED_POSITION 200
 #define FRONT_PROBE_BED_POSITION 60
 #define BACK_PROBE_BED_POSITION 190
 
@@ -1031,7 +1031,7 @@
 
 // Homing speeds (mm/m)
 #define HOMING_FEEDRATE_XY (50*60)
-#define HOMING_FEEDRATE_Z  (15*60)
+#define HOMING_FEEDRATE_Z  (7*60)
 
 // @section calibrate
 
