@@ -1,7 +1,7 @@
-Configs for Dolly i3
-====================
+Marlink Configs for Dolly i3
+============================
 
-My configuration and customization of -- https://toms3d.org/2017/02/23/building-cheapest-possible-prusa-i3-mk2/ using Marlin 1.1.0-rc8
+My configuration and customization of -- https://toms3d.org/2017/02/23/building-cheapest-possible-prusa-i3-mk2/ using various Marlin version. I update Marlin as I go.
 
 
 * ramps-1.4 -- original ramps-based system
