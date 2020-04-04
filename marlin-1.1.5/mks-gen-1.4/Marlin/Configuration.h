@@ -1,3 +1,5 @@
+#include <U8glib.h>
+
 /**
  * Marlin 3D Printer Firmware
  * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
@@ -509,7 +511,10 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
  /* TR8 -- 8mm pitch */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 144 }
+
+
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 165 }
+
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -855,7 +860,7 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).x
