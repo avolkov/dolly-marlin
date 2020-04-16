@@ -356,9 +356,9 @@
 // #define  DEFAULT_Kd 70.62
 
 // e3dv6 with a sock
-#define  DEFAULT_Kp 22.24
-#define  DEFAULT_Ki 1.69
-#define  DEFAULT_Kd 73.35
+#define  DEFAULT_Kp 25.45
+#define  DEFAULT_Ki 2.02
+#define  DEFAULT_Kd 80.27
 
 #endif // PIDTEMP
 
