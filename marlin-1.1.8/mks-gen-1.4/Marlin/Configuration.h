@@ -356,9 +356,15 @@
 // #define  DEFAULT_Kd 70.62
 
 // e3dv6 with a sock
-#define  DEFAULT_Kp 22.24
-#define  DEFAULT_Ki 1.69
-#define  DEFAULT_Kd 73.35
+//#define  DEFAULT_Kp 22.24
+//#define  DEFAULT_Ki 1.69
+//#define  DEFAULT_Kd 73.35
+
+// Latest tune (2020, Dec 22) Generic nozzle \w sock
+#define  DEFAULT_Kp 49.31
+#define  DEFAULT_Ki 5.37
+#define  DEFAULT_Kd 113.11
+
 
 #endif // PIDTEMP
 
@@ -396,9 +402,15 @@
 //#define  DEFAULT_bedKd 1013.15
 
 // Wanhao (teflon?)
-#define  DEFAULT_bedKp 328.08
-#define  DEFAULT_bedKi 58.90
-#define  DEFAULT_bedKd 456.89
+//#define  DEFAULT_bedKp 328.08
+//#define  DEFAULT_bedKi 58.90
+//#define  DEFAULT_bedKd 456.89
+
+// Latest generic config \w Kapton tape (2020 Dec 22)
+#define  DEFAULT_bedKp 297.98
+#define  DEFAULT_bedKi 58.67
+#define  DEFAULT_bedKd 378.37
+
 
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
