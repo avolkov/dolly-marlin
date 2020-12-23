@@ -532,7 +532,7 @@
    Override with M92
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 173 } 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 150 }
 // Z steps for eSUN ABS @ 250C -- 173
 
 
