@@ -356,9 +356,14 @@
 // #define  DEFAULT_Kd 70.62
 
 // e3dv6 with a sock
-#define  DEFAULT_Kp 25.45
-#define  DEFAULT_Ki 2.02
-#define  DEFAULT_Kd 80.27
+//#define  DEFAULT_Kp 22.24
+//#define  DEFAULT_Ki 1.69
+//#define  DEFAULT_Kd 73.35
+
+// Latest tune (2020, Dec 22) Generic nozzle \w sock
+#define  DEFAULT_Kp 49.31
+#define  DEFAULT_Ki 5.37
+#define  DEFAULT_Kd 113.11
 
 #endif // PIDTEMP
 
@@ -396,9 +401,15 @@
 //#define  DEFAULT_bedKd 1013.15
 
 // Wanhao (teflon?)
-#define  DEFAULT_bedKp 328.08
-#define  DEFAULT_bedKi 58.90
-#define  DEFAULT_bedKd 456.89
+//#define  DEFAULT_bedKp 328.08
+//#define  DEFAULT_bedKi 58.90
+//#define  DEFAULT_bedKd 456.89
+
+// Latest generic config \w Kapton tape (2020 Dec 22)
+#define  DEFAULT_bedKp 297.98
+#define  DEFAULT_bedKi 58.67
+#define  DEFAULT_bedKd 378.37
+
 
 // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -520,8 +531,10 @@
    Override with M92
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 150 } 
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 150 }
 // Z steps for D3D PLA @220C
+// Z steps for eSUN ABS @ 250C -- 173
+
 
 
 /**
@@ -743,7 +756,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR false
 #define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_Z_DIR true
 
 // Enable this option for Toshiba stepper drivers
 //#define CONFIG_STEPPERS_TOSHIBA
@@ -1027,8 +1040,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-#define Z_SAFE_HOMING_X_POINT 115    // X point for Z homing when homing all axes (G28).
-#define Z_SAFE_HOMING_Y_POINT 115    // Y point for Z homing when homing all axes (G28).
+#define Z_SAFE_HOMING_X_POINT 107    // X point for Z homing when homing all axes (G28).
+#define Z_SAFE_HOMING_Y_POINT 107    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
