@@ -118,6 +118,8 @@
 
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
+#define MOTHERBOARD BOARD_MKS_13 
+
 #ifndef MOTHERBOARD
 #define MOTHERBOARD BOARD_RAMPS_14_EFB
 #endif
