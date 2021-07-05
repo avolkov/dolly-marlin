@@ -74,7 +74,7 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2020 March 02 / mks-gen-1.4 )" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 July 04 / mks-gen-1.4 / 1934 )" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
@@ -358,14 +358,20 @@
 // #define  DEFAULT_Kd 70.62
 
 // e3dv6 with a sock
-//#define  DEFAULT_Kp 22.24
-//#define  DEFAULT_Ki 1.69
-//#define  DEFAULT_Kd 73.35
+// #define  DEFAULT_Kp 22.24
+// #define  DEFAULT_Ki 1.69
+// #define  DEFAULT_Kd 73.35
 
 // Latest tune (2020, Dec 22) Generic nozzle \w sock
-#define  DEFAULT_Kp 49.31
-#define  DEFAULT_Ki 5.37
-#define  DEFAULT_Kd 113.11
+// #define  DEFAULT_Kp 49.31
+// #define  DEFAULT_Ki 5.37
+// #define  DEFAULT_Kd 113.11
+
+// 24V, 40mm fan, semitec 104GT-2 and sock (2021, Jul 3)
+#define  DEFAULT_Kp 21.69
+#define  DEFAULT_Ki 1.42
+#define  DEFAULT_Kd 82.63
+
 
 #endif // PIDTEMP
 
@@ -529,7 +535,7 @@
 //#define DISTINCT_E_FACTORS
 
 /**
-   Default Axis Steps Per Unit (steps/mm)
+   Default Axis    Per Unit (steps/mm)
    Override with M92
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
