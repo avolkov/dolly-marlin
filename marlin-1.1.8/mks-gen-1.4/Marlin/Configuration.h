@@ -118,7 +118,7 @@
 
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
-#define MOTHERBOARD BOARD_MKS_13 
+#define MOTHERBOARD BOARD_MKS_13
 
 #ifndef MOTHERBOARD
 #define MOTHERBOARD BOARD_RAMPS_14_EFB
@@ -580,8 +580,8 @@
    When changing speed and direction, if the difference is less than the
    value set here, it may happen instantaneously.
 */
-#define DEFAULT_XJERK                 15.0
-#define DEFAULT_YJERK                 15.0
+#define DEFAULT_XJERK                 12.0
+#define DEFAULT_YJERK                 12.0
 #define DEFAULT_ZJERK                  0.3
 #define DEFAULT_EJERK                  5.0
 
