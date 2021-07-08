@@ -77,7 +77,7 @@
 #define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 July 07 / mks-gen-1.4 / 2043 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
+#define STRING_SPLASH_LINE2 "2021-07-07 mks-gen-1.4"         // will be shown during bootup in line 2
 
 //
 // *** VENDORS PLEASE READ *****************************************************
@@ -699,7 +699,7 @@
 */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 21  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 12  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 2   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.1   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000 
