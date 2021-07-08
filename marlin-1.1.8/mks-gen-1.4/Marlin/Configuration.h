@@ -692,14 +692,14 @@
       E |           | I
       F | (-) N (+) | G <-- nozzle (10,10)
       T |           | H
-        |    (-)    | T
+        |    (-)    | TG0Z20
         |           |
         O-- FRONT --+
       (0,0)
 */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 21  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 12  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.1   // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 19  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 6  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000 
@@ -708,7 +708,7 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Speed for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (HOMING_FEEDRATE_Z / 1.5)
+#define Z_PROBE_SPEED_SLOW (HOMING_FEEDRATE_Z / 2)
 
 // The number of probes to perform at each point.
 //   Set to 2 for a fast/slow probe, using the second probe result.
@@ -924,13 +924,13 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
 // Set the number of grid points per dimension.
-#define GRID_MAX_POINTS_X 3
+#define GRID_MAX_POINTS_X 4
 #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
 // Set the boundaries for probing (where the probe can reach).
-#define LEFT_PROBE_BED_POSITION 30
-#define RIGHT_PROBE_BED_POSITION 200
-#define FRONT_PROBE_BED_POSITION 60
+#define LEFT_PROBE_BED_POSITION 20
+#define RIGHT_PROBE_BED_POSITION 180
+#define FRONT_PROBE_BED_POSITION 50
 #define BACK_PROBE_BED_POSITION 190
 
 // The Z probe minimum outer margin (to validate G29 parameters).
