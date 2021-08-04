@@ -74,10 +74,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 July 07 / mks-gen-1.4 / 2043 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 04 / mks-gen-1.4 / 1954 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "2021-07-07 mks-gen-1.4"         // will be shown during bootup in line 2
+#define STRING_SPLASH_LINE2 "2021-08-03 mks-gen-1.4"         // will be shown during bootup in line 2
 
 //
 // *** VENDORS PLEASE READ *****************************************************
@@ -929,9 +929,9 @@
 
 // Set the boundaries for probing (where the probe can reach).
 #define LEFT_PROBE_BED_POSITION 20
-#define RIGHT_PROBE_BED_POSITION 180
-#define FRONT_PROBE_BED_POSITION 50
-#define BACK_PROBE_BED_POSITION 190
+#define RIGHT_PROBE_BED_POSITION 190
+#define FRONT_PROBE_BED_POSITION 55
+#define BACK_PROBE_BED_POSITION 200
 
 // The Z probe minimum outer margin (to validate G29 parameters).
 #define MIN_PROBE_EDGE 25
