@@ -78,7 +78,7 @@
 #define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 18 / mks-gen-1.4 / 1355 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "2021-08-14 mks-gen-1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "2021-08-18 mks-gen-1.4"         // will be shown during bootup in line
 //
 // *** VENDORS PLEASE READ *****************************************************
 //
@@ -704,7 +704,7 @@
 */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 19  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 6  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.1   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000 
@@ -918,7 +918,7 @@
 */
 #define G26_MESH_VALIDATION   // Enable G26 mesh validation
 #if ENABLED(G26_MESH_VALIDATION)
-#define MESH_TEST_NOZZLE_SIZE     0.5   // (mm) Diameter of primary nozzle.
+#define MESH_TEST_NOZZLE_SIZE     0.4   // (mm) Diameter of primary nozzle.
 #define MESH_TEST_LAYER_HEIGHT    0.2   // (mm) Default layer height for the G26 Mesh Validation Tool.
 #define MESH_TEST_HOTEND_TEMP   220.0   // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
 #define MESH_TEST_BED_TEMP       65.0   // (°C) Default bed temperature for the G26 Mesh Validation Tool.
