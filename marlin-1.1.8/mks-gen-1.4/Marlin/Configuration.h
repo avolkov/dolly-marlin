@@ -75,7 +75,7 @@
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
 
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 14 / mks-gen-1.4 / 1040 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 18 / mks-gen-1.4 / 1355 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 "2021-08-14 mks-gen-1.4"         // will be shown during bootup in line
