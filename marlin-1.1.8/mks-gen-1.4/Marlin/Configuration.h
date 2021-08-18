@@ -74,11 +74,11 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 July 08 / mks-gen-1.4 / 1853 )" // Who made the
+
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 14 / mks-gen-1.4 / 1040 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "2021-07-08 mks-gen-1.4"         // will be shown during bootup in line 2
-
+#define STRING_SPLASH_LINE2 "2021-08-14 mks-gen-1.4"         // will be shown during bootup in line
 //
 // *** VENDORS PLEASE READ *****************************************************
 //
@@ -351,27 +351,32 @@
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
+/*
 //24V heater; tuned with M303 E0 S200 C8
 // knockoff e3dv6
-// #define  DEFAULT_Kp 22.54
-// #define  DEFAULT_Ki 1.80
-// #define  DEFAULT_Kd 70.62
+#define  DEFAULT_Kp 22.54
+#define  DEFAULT_Ki 1.80
+#define  DEFAULT_Kd 70.62
 
 // e3dv6 with a sock
-// #define  DEFAULT_Kp 22.24
-// #define  DEFAULT_Ki 1.69
-// #define  DEFAULT_Kd 73.35
+#define  DEFAULT_Kp 22.24
+#define  DEFAULT_Ki 1.69
+#define  DEFAULT_Kd 73.35
 
 // Latest tune (2020, Dec 22) Generic nozzle \w sock
-// #define  DEFAULT_Kp 49.31
-// #define  DEFAULT_Ki 5.37
-// #define  DEFAULT_Kd 113.11
+#define  DEFAULT_Kp 49.31
+#define  DEFAULT_Ki 5.37
+#define  DEFAULT_Kd 113.11
 
 // 24V, 40mm fan, semitec 104GT-2 and sock (2021, Jul 3)
 #define  DEFAULT_Kp 21.69
 #define  DEFAULT_Ki 1.42
 #define  DEFAULT_Kd 82.63
-
+*/
+// 24V 40mm fan, 0.4mm nozzle semitec 104GT-2 and sock (2021, Aug 14)
+#define  DEFAULT_Kp 20.08
+#define  DEFAULT_Ki 1.30
+#define  DEFAULT_Kd 77.33
 
 #endif // PIDTEMP
 
@@ -539,9 +544,9 @@
    Override with M92
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 150 }
-// E steps for D3D PLA @210C
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 144 }
 // E steps for eSUN ABS @ 250C -- 173
+// E steps for D3D  PLA @210 -- 156 (0.4mm nozzle)
 
 
 
@@ -929,9 +934,9 @@
 
 // Set the boundaries for probing (where the probe can reach).
 #define LEFT_PROBE_BED_POSITION 20
-#define RIGHT_PROBE_BED_POSITION 180
-#define FRONT_PROBE_BED_POSITION 50
-#define BACK_PROBE_BED_POSITION 190
+#define RIGHT_PROBE_BED_POSITION 190
+#define FRONT_PROBE_BED_POSITION 55
+#define BACK_PROBE_BED_POSITION 200
 
 // The Z probe minimum outer margin (to validate G29 parameters).
 #define MIN_PROBE_EDGE 25
