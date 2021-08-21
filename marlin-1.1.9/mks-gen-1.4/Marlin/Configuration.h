@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 19 / mks-gen-1.4 / 2202 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 20 / mks-gen-1.4 / 2110 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "2021-08-19 mks-gen-1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "2021-08-20 mks-gen-1.4"         // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
