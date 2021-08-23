@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 20 / mks-gen-1.4 / 2110 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 22 / mks-gen-1.4 / 2159 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "2021-08-20 mks-gen-1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "2021-08-22 mks-gen-1.4"         // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -892,15 +892,18 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 215
-#define Y_BED_SIZE 215
+//#define X_BED_SIZE 215
+//#define Y_BED_SIZE 215
+
+#define X_BED_SIZE 167
+#define Y_BED_SIZE 163
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS 15
+#define Y_MIN_POS 35
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define X_MAX_POS 182
+#define Y_MAX_POS 198
 #define Z_MAX_POS 210
 
 /**
@@ -988,15 +991,15 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
-//#define AUTO_BED_LEVELING_UBL
+//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 
 /**
  * Enable detailed logging of G28, G29, M48, etc.
@@ -1158,8 +1161,10 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
+  //#define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
+  //#define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_X_POINT 108
+  #define Z_SAFE_HOMING_Y_POINT 108
 #endif
 
 // Homing speeds (mm/m)
