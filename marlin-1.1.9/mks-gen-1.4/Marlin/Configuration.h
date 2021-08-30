@@ -447,17 +447,13 @@
     //#define  DEFAULT_bedKi 1.80
     //#define  DEFAULT_bedKd 1013.15
 
-    // Wanhao (teflon?)
-    //#define  DEFAULT_bedKp 328.08
-    //#define  DEFAULT_bedKi 58.90
-    //#define  DEFAULT_bedKd 456.89
-
     // Latest generic config \w Kapton tape (2020 Dec 22)
     //#define  DEFAULT_bedKp 297.98
     //#define  DEFAULT_bedKi 58.67
     //#define  DEFAULT_bedKd 378.37
     
     // MK3 bed \w Kapton tape and carboard reflector (2021 Aug 29)
+    // M303 E-1 C8 S65
     #define DEFAULT_bedKp 589.15
     #define DEFAULT_bedKi 116.00
     #define DEFAULT_bedKd 748.08
