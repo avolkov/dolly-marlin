@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 26 / mks-gen-1.4 / 2208 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 29 / mks-gen-1.4 / 2246 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "21/08/26 mks-gen1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "21/08/29 mks-gen1.4"         // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -426,7 +426,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -456,6 +456,7 @@
     #define  DEFAULT_bedKp 297.98
     #define  DEFAULT_bedKi 58.67
     #define  DEFAULT_bedKd 378.37
+    // MK3 bed \w Kapton tape and carboard reflector (2021 Aug 29)
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -803,12 +804,12 @@
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
 
 // Feedrate (mm/m) for the "accurate" probe of each point
-#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2)
+#define Z_PROBE_SPEED_SLOW (Z_PROBE_SPEED_FAST / 2) - 40
 
 // The number of probes to perform at each point.
 //   Set to 2 for a fast/slow probe, using the second probe result.
 //   Set to 3 or more for slow probes, averaging the results.
-#define MULTIPLE_PROBING 2
+#define MULTIPLE_PROBING 3
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
