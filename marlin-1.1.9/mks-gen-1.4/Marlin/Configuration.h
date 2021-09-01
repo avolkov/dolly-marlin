@@ -454,6 +454,7 @@
     #define  DEFAULT_bedKd 378.37
     */
     // MK3 bed \w Kapton tape and carboard reflector (2021 Aug 29)
+    // M303 E-1 C8 S65
     #define DEFAULT_bedKp 589.15
     #define DEFAULT_bedKi 116.00
     #define DEFAULT_bedKd 748.08
