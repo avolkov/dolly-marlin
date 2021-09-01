@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 August 29 / mks-gen-1.4 / 2246 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 September 01 / mks-gen-1.4 / 1323 )" // Who made the
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "21/08/29 mks-gen1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "21/09/01 mks-gen1.4"         // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -448,15 +448,10 @@
     //#define  DEFAULT_bedKd 1013.15
 
     // Latest generic config \w Kapton tape (2020 Dec 22)
-    //#define  DEFAULT_bedKp 297.98
-    //#define  DEFAULT_bedKi 58.67
-    //#define  DEFAULT_bedKd 378.37
-    
+    #define  DEFAULT_bedKp 297.98
+    #define  DEFAULT_bedKi 58.67
+    #define  DEFAULT_bedKd 378.37
     // MK3 bed \w Kapton tape and carboard reflector (2021 Aug 29)
-    // M303 E-1 C8 S65
-    #define DEFAULT_bedKp 589.15
-    #define DEFAULT_bedKi 116.00
-    #define DEFAULT_bedKd 748.08
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
