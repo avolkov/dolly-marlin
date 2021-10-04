@@ -601,10 +601,18 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
+    // Calibration command M303 E0 S210 C8
+
     // 24V 40mm fan, 0.4mm nozzle semitec 104GT-2 and sock (2021, Aug 14)
+    /*
     #define  DEFAULT_Kp 20.08
     #define  DEFAULT_Ki 1.30
     #define  DEFAULT_Kd 77.33
+    */
+    // Brass heater block plus all of the above(2021, Oct 04)
+    #define DEFAULT_Kp 14.67
+    #define DEFAULT_Ki 0.70
+    #define DEFAULT_Kd 77.36
   #endif
 #endif // PIDTEMP
 
