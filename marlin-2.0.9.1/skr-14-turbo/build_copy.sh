@@ -8,5 +8,7 @@ fi
 rm /media/alex/disk/*
 pio run
 [ $? -ne 0 ] && exit 2
-cp .pio/build/LPC1769/firmware.bin /media/alex/disk/
+cp -v .pio/build/LPC1769/firmware.bin /media/alex/disk/
+
 umount /media/alex/disk
+echo "unmounted sd card"
