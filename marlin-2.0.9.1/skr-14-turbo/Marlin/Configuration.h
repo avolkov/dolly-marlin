@@ -650,10 +650,16 @@
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Possible settings for MK52 prusa bed from -- https://github.com/codiac2600/SKR-Bear-Marlin/blob/prusa-skr-aio-2.0.x/Marlin/Prusa_SKR_Configuration.h
-
+  /*
   #define DEFAULT_bedKp  28.13
   #define DEFAULT_bedKi   2.09
   #define DEFAULT_bedKd 483.07
+  */
+
+  // Prusa clone bed with the PIDTUNE command from below with PEI Steel sheet (2021 Oct 5)
+  #define DEFAULT_bedKp 46.50
+  #define DEFAULT_bedKi 2.41
+  #define DEFAULT_bedKd 598.17
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
