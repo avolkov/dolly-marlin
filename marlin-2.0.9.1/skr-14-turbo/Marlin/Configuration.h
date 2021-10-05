@@ -647,7 +647,7 @@
 #define MAX_BED_POWER 255 // limits duty cycle to bed; 255=full current
 
 #if ENABLED(PIDTEMPBED)
-  #define MIN_BED_POWER 50
+  #define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
   //Possible settings for MK52 prusa bed from -- https://github.com/codiac2600/SKR-Bear-Marlin/blob/prusa-skr-aio-2.0.x/Marlin/Prusa_SKR_Configuration.h
