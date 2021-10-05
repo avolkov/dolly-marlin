@@ -651,9 +651,9 @@
 
   //Possible settings for MK52 prusa bed from -- https://github.com/codiac2600/SKR-Bear-Marlin/blob/prusa-skr-aio-2.0.x/Marlin/Prusa_SKR_Configuration.h
 
-  #define PRUSA_SKR_DEFAULT_bedKp  28.13
-  #define PRUSA_SKR_DEFAULT_bedKi   2.09
-  #define PRUSA_SKR_DEFAULT_bedKd 483.07
+  #define DEFAULT_bedKp  28.13
+  #define DEFAULT_bedKi   2.09
+  #define DEFAULT_bedKd 483.07
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
