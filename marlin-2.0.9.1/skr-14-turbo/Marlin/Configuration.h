@@ -938,8 +938,9 @@
 See SKR-bear-Marlin -- Prusa_SKR_Conditionals
 PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 */
+ // Bondtech drivegears seems to be set at 140 steps per 16microstep / 1.8 motor
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 280 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 140 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -948,7 +949,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
  */
 #define DEFAULT_MAX_FEEDRATE          { 500, 500, 30, 80 }
 
-//#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
   #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
 #endif
