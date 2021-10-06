@@ -611,9 +611,11 @@
     #define  DEFAULT_Kd 77.33
     */
     // Brass heater block plus all of the above(2021, Oct 04)
+    // Constantly undrshoots
     #define DEFAULT_Kp 14.67
     #define DEFAULT_Ki 0.70
     #define DEFAULT_Kd 77.36
+    // Trying
   #endif
 #endif // PIDTEMP
 
