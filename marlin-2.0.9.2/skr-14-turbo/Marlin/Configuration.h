@@ -1472,7 +1472,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
   // TODO: Bend sense pin on E0, this is what interfering with filament sensor
   #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
-  #define FIL_RUNOUT_PIN       P1_26
+  //#define FIL_RUNOUT_PIN       P1_26
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
                                           // This is automatically enabled for MIXING_EXTRUDERs.
@@ -1668,9 +1668,9 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
   #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
+  #define GRID_MAX_POINTS_X 12      // Don't use more than 15 points per axis, implementation limited.
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
-    #define GRID_MAX_POINTS_Y 12
+    #define GRID_MAX_POINTS_Y 10
 
   #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
