@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021-10-02)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021-10-13)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
