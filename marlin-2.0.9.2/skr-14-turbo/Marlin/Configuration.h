@@ -1464,7 +1464,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
  */
 #define FILAMENT_RUNOUT_SENSOR_DEBUG
 
-#define FILAMENT_RUNOUT_SENSOR
+//#define FILAMENT_RUNOUT_SENSOR
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT_PIN for each.
