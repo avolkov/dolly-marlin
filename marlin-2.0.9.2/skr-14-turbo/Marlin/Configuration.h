@@ -1672,7 +1672,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
   #define GRID_MAX_POINTS_X 4
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
   //#define GRID_MAX_POINTS_Y 10
-  #define GRID_MAX_POINTS_Y 10
+  #define GRID_MAX_POINTS_Y 3
 
   #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
