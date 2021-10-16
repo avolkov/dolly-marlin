@@ -1206,7 +1206,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 19, 6, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { 23, 5, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
