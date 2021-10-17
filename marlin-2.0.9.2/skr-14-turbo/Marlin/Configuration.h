@@ -1274,10 +1274,10 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_DEPLOY_PROBE    0 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
-//#define Z_AFTER_PROBING           5 // Z position after probing is done
+#define Z_CLEARANCE_MULTI_PROBE     2 // Z Clearance between multiple probes
+#define Z_AFTER_PROBING             5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -1 // Farthest distance below the trigger-point to go before stopping
 
@@ -1668,11 +1668,11 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
   #define MESH_INSET 0              // Set Mesh bounds as an inset region of the bed
-  //#define GRID_MAX_POINTS_X 14      // Don't use more than 15 points per axis, implementation limited.
-  #define GRID_MAX_POINTS_X 4
+  //#define GRID_MAX_POINTS_X 14    // Don't use more than 15 points per axis, implementation limited.
+  #define GRID_MAX_POINTS_X 8
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
   //#define GRID_MAX_POINTS_Y 10
-  #define GRID_MAX_POINTS_Y 4
+  #define GRID_MAX_POINTS_Y 6
 
   #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
