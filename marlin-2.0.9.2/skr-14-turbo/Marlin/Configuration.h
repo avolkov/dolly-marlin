@@ -1674,7 +1674,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
   //#define GRID_MAX_POINTS_Y 10
   #define GRID_MAX_POINTS_Y 6
 
-  #define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
+  //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
   #define UBL_MESH_EDIT_MOVES_Z     // Sophisticated users prefer no movement of nozzle
   #define UBL_SAVE_ACTIVE_ON_M500   // Save the currently active mesh in the current slot on M500
