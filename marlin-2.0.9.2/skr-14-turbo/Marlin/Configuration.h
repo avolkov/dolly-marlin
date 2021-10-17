@@ -1594,7 +1594,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
  * Turn on with the command 'M111 S32'.
  * NOTE: Requires a lot of PROGMEM!
  */
-//#define DEBUG_LEVELING_FEATURE
+#define DEBUG_LEVELING_FEATURE
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL, PROBE_MANUALLY)
   // Set a height for the start of manual adjustment
@@ -1669,10 +1669,10 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 
   #define MESH_INSET 0              // Set Mesh bounds as an inset region of the bed
   //#define GRID_MAX_POINTS_X 14    // Don't use more than 15 points per axis, implementation limited.
-  #define GRID_MAX_POINTS_X 8
+  #define GRID_MAX_POINTS_X 4
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
   //#define GRID_MAX_POINTS_Y 10
-  #define GRID_MAX_POINTS_Y 6
+  #define GRID_MAX_POINTS_Y 3
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 

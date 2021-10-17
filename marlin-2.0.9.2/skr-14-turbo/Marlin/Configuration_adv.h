@@ -1958,7 +1958,7 @@
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
-  #define MESH_MIN_X -2
+  #define MESH_MIN_X 0
   #define MESH_MIN_Y -10
   #define MESH_MAX_X 230
   #define MESH_MAX_Y 220
@@ -3657,7 +3657,7 @@
 //#define NO_WORKSPACE_OFFSETS
 
 // Extra options for the M114 "Current Position" report
-//#define M114_DETAIL         // Use 'M114` for details to check planner calculations
+#define M114_DETAIL         // Use 'M114` for details to check planner calculations
 //#define M114_REALTIME       // Real current position based on forward kinematics
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
