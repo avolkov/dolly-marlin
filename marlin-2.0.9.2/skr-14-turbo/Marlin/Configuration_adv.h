@@ -1950,18 +1950,18 @@
  * the probe to be unable to reach any points.
  */
 #if PROBE_SELECTED && !IS_KINEMATIC
-  //#define PROBING_MARGIN_LEFT PROBING_MARGIN
-  //#define PROBING_MARGIN_RIGHT PROBING_MARGIN
-  //#define PROBING_MARGIN_FRONT PROBING_MARGIN
-  //#define PROBING_MARGIN_BACK PROBING_MARGIN
+  #define PROBING_MARGIN_LEFT -2
+  #define PROBING_MARGIN_RIGHT 230
+  #define PROBING_MARGIN_FRONT -10
+  #define PROBING_MARGIN_BACK 220
 #endif
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
-  #define MESH_MIN_X 0
-  #define MESH_MIN_Y -10
-  #define MESH_MAX_X 230
-  #define MESH_MAX_Y 220
+  //#define MESH_MIN_X 0
+  //#define MESH_MIN_Y -10
+  //#define MESH_MAX_X 230
+  //#define MESH_MAX_Y 220
 #endif
 
 #if BOTH(AUTO_BED_LEVELING_UBL, EEPROM_SETTINGS)
