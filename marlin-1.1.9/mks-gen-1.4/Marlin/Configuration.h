@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 October 18 / mks-gen-1.4 / 1031 )" // Who made the
-#define SHOW_BOOTSCREEN
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 October 22 / mks-gen-1.4 / 1528 )" // Who made the
+//#define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "21-10-18 mks-gen1.4"         // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "21-10-22 mks-gen1.4" // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -831,7 +831,7 @@
 #define Z_CLEARANCE_MULTI_PROBE     2 // Z Clearance between multiple probes
 #define Z_AFTER_PROBING           10 // Z position after probing is done
 
-#define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
+#define Z_PROBE_LOW_POINT          -1 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
 #define Z_PROBE_OFFSET_RANGE_MIN -20
@@ -1038,7 +1038,7 @@
 #if ENABLED(AUTO_BED_LEVELING_LINEAR) || ENABLED(AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Set the boundaries for probing (where the probe can reach).
@@ -1105,12 +1105,15 @@
  * Override if the automatically selected points are inadequate.
  */
 #if ENABLED(AUTO_BED_LEVELING_3POINT) || ENABLED(AUTO_BED_LEVELING_UBL)
-  #define PROBE_PT_1_X 40
-  #define PROBE_PT_1_Y 180
+  
+  #define PROBE_PT_1_X 45
+  #define PROBE_PT_1_Y 15
+  /*
   #define PROBE_PT_2_X 40
   #define PROBE_PT_2_Y 35
   #define PROBE_PT_3_X 170
   #define PROBE_PT_3_Y 35
+  */
 #endif
 
 /**
@@ -1243,7 +1246,7 @@
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //
 #define EEPROM_SETTINGS // Enable for M500 and M501 commands
-//#define DISABLE_M503    // Saves ~2700 bytes of PROGMEM. Disable for release!
+#define DISABLE_M503    // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT   // Give feedback on EEPROM commands. Disable to save PROGMEM.
 
 //
