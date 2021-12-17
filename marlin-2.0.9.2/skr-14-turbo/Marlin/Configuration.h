@@ -587,36 +587,32 @@
 #define BANG_MAX 255     // Limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 // Default 0.95, for explanation see -- https://github.com/MarlinFirmware/Marlin/issues/21661#issuecomment-826222413
-#define PID_K1 0.95      // Smoothing factor within any PID loop
+#define PID_K1 0.55      // Smoothing factor within any PID loop
 
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
+  // Calibration command M303 E0 S210 C8
 
-  #if ENABLED(PID_PARAMS_PER_HOTEND)
-    // Specify up to one value per hotend here, according to your setup.
-    // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
-  #else
-    // Calibration command M303 E0 S210 C8
-
-    // 24V 40mm fan, 0.4mm nozzle semitec 104GT-2 and sock (2021, Aug 14)
-    /*
-    #define  DEFAULT_Kp 20.08
-    #define  DEFAULT_Ki 1.30
-    #define  DEFAULT_Kd 77.33
-    */
-    // Brass heater block plus all of the above(2021, Oct 04)
-    // Constantly undrshoots
-    #define DEFAULT_Kp 14.67
-    #define DEFAULT_Ki 0.70
-    #define DEFAULT_Kd 77.36
-    // Trying
-  #endif
+  // 24V 40mm fan, 0.4mm nozzle semitec 104GT-2 and sock (2021, Aug 14)
+  /*
+  #define  DEFAULT_Kp 20.08
+  #define  DEFAULT_Ki 1.30
+  #define  DEFAULT_Kd 77.33
+  */
+  // Brass heater block plus all of the above(2021, Oct 04)
+  // Constantly undershoots
+  /*
+  #define DEFAULT_Kp 13.38
+  #define DEFAULT_Ki 0.59
+  #define DEFAULT_Kd 76.33
+  */
+  // Yet another attempt at fixing brass heater (2021, Dec 16)
+  #define DEFAULT_Kp 13.57
+  #define DEFAULT_Ki 0.61
+  #define DEFAULT_Kd 75.97
 #endif // PIDTEMP
 
 //===========================================================================
@@ -717,7 +713,7 @@
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 5 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 16 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
 
@@ -1398,7 +1394,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 // The size of the printable area
 // See -- https://github.com/codiac2600/SKR-Bear-Marlin/blob/prusa-skr-aio-2.0.x/Marlin/Configuration.h
 #define X_BED_SIZE 250
-#define Y_BED_SIZE 220
+#define Y_BED_SIZE 210
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
