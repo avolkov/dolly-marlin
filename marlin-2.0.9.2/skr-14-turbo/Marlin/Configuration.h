@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021-12-27)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021-12-29)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1665,10 +1665,10 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 
   #define MESH_INSET 0              // Set Mesh bounds as an inset region of the bed
   //#define GRID_MAX_POINTS_X 14    // Don't use more than 15 points per axis, implementation limited.
-  #define GRID_MAX_POINTS_X 12
+  #define GRID_MAX_POINTS_X 8
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
   //#define GRID_MAX_POINTS_Y 10
-  #define GRID_MAX_POINTS_Y 10
+  #define GRID_MAX_POINTS_Y 6
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
 
