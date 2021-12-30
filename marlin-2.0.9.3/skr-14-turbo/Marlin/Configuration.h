@@ -1780,7 +1780,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT 160  // X point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 150  // X point for Z homing
   #define Z_SAFE_HOMING_Y_POINT 122  // Y point for Z homing
 #endif
 
