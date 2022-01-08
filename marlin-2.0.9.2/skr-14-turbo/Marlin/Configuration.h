@@ -1594,7 +1594,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL, PROBE_MANUALLY)
   // Set a height for the start of manual adjustment
-  #define MANUAL_PROBE_START_Z 0.2  // (mm) Comment out to use the last-measured height
+  #define MANUAL_PROBE_START_Z 0.8  // (mm) Comment out to use the last-measured height
 #endif
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_BILINEAR, AUTO_BED_LEVELING_UBL)
@@ -1663,7 +1663,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 0              // Set Mesh bounds as an inset region of the bed
+  #define MESH_INSET 5              // Set Mesh bounds as an inset region of the bed
   //#define GRID_MAX_POINTS_X 14    // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_X 8
   //#define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
@@ -1771,9 +1771,10 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 150  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 122  // Y point for Z homing
 #endif
+
 
 // Homing speeds (mm/min)
 #define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (6*60) }
