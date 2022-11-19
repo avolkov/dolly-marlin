@@ -832,7 +832,7 @@
 #endif
 
 
-#define Z2_DRIVER_TYPE
+
 //
 // Multi-Z steppers
 //
@@ -976,7 +976,7 @@
    * If not defined, probe limits will be used.
    * Override with 'M422 S<index> X<pos> Y<pos>'.
    */
-  #define Z_STEPPER_ALIGN_XY { {  10, 190 }, { 100,  10 } }
+  #define Z_STEPPER_ALIGN_XY { {  40, 160 }, { 160,  40 } }
 
   /**
    * Orientation for the automatically-calculated probe positions.
