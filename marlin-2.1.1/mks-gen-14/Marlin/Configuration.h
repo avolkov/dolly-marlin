@@ -665,13 +665,14 @@
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  23.30,  23.30 }
-    #define DEFAULT_Ki_LIST {   1.37,   1.37 }
-    #define DEFAULT_Kd_LIST {  99.40,  99.40 }
+    #define DEFAULT_Kp_LIST {  20.08,  23.30 }
+    #define DEFAULT_Ki_LIST {   1.30,   1.37 }
+    #define DEFAULT_Kd_LIST {  77.33,  99.40 }
   #else
-    #define DEFAULT_Kp  20.08
-    #define DEFAULT_Ki   1.30
-    #define DEFAULT_Kd  77.33
+    // Tuned with M303 E0 C8 S210
+    #define DEFAULT_Kp  20.14
+    #define DEFAULT_Ki   1.25
+    #define DEFAULT_Kd  81.28
   #endif
 #endif
 
@@ -736,7 +737,7 @@
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  * @section bed temp
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1503,7 +1504,7 @@
 #define Z_PROBE_FEEDRATE_FAST (4*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2) - 40
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2) - 20
 
 /**
  * Probe Activation Switch
@@ -1681,7 +1682,7 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT  1      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
 #define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
@@ -2096,8 +2097,8 @@
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT 20  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 125  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 40  // Y point for Z homing
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
