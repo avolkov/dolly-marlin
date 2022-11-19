@@ -81,10 +81,10 @@
 // User-specified version info of this build to display in [Pronterface, etc] terminal window during
 // startup. Implementation of an idea by Prof Braino to inform user that any changes made to this
 // build by the user have been successfully uploaded into firmware.
-#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2021 October 22 / mks-gen-1.4 / 1528 )" // Who made the
+#define STRING_CONFIG_H_AUTHOR "(Alex Volkov, 2022 November 18 / mks-gen-1.4 / 1528 )" // Who made the
 //#define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 SHORT_BUILD_VERSION // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "21-10-22 mks-gen1.4" // will be shown during bootup in line
+#define STRING_SPLASH_LINE2 "22-11-18 mks-gen1.4" // will be shown during bootup in line
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -1167,7 +1167,7 @@
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_Y_POINT 20    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
