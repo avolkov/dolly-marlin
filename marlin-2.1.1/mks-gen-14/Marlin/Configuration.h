@@ -548,7 +548,16 @@
 #define TEMP_SENSOR_7 0
 #define TEMP_SENSOR_BED 13
 #define TEMP_SENSOR_PROBE 0
-#define TEMP_SENSOR_CHAMBER 0
+// TODO: temp sensor chamber use the same sensor as for bed
+// Use TEMP_SENSOR_1 pin (ramps -- analog input -- 13)
+
+//#define TEMP_SENSOR_CHAMBER 0
+
+// This works, just add a pin \w sensor
+#define TEMP_SENSOR_CHAMBER 13
+#define TEMP_CHAMBER_PIN 15
+
+
 #define TEMP_SENSOR_COOLER 0
 #define TEMP_SENSOR_BOARD 0
 #define TEMP_SENSOR_REDUNDANT 0
