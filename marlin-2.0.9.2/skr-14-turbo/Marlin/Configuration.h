@@ -949,7 +949,7 @@ PRUSA_SKR_E_STEPPER == 1 // Stock 1.8°
 */
  // Bondtech drivegears seems to be set at 140 steps per 16microstep / 1.8 motor
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 280 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 140 }
 
 /**
  * Default Max Feed Rate (mm/s)
