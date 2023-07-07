@@ -580,9 +580,9 @@
 #endif
 
 #if TEMP_SENSOR_BED
-  #define TEMP_BED_RESIDENCY_TIME      2  // (seconds) Time to wait for bed to "settle" in M190
-  #define TEMP_BED_WINDOW              4  // (°C) Temperature proximity for the "temperature reached" timer
-  #define TEMP_BED_HYSTERESIS          7  // (°C) Temperature proximity considered "close enough" to the target
+  #define TEMP_BED_RESIDENCY_TIME      20  // (seconds) Time to wait for bed to "settle" in M190
+  #define TEMP_BED_WINDOW              3  // (°C) Temperature proximity for the "temperature reached" timer
+  #define TEMP_BED_HYSTERESIS          3  // (°C) Temperature proximity considered "close enough" to the target
 #endif
 
 #if TEMP_SENSOR_CHAMBER
