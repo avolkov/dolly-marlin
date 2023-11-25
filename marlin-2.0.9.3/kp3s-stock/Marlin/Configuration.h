@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(bdwilson)"             // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Alex Vokov / 2023-11-24"             // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -1256,8 +1256,10 @@
 #define PREHEAT_BEFORE_PROBING
 #if ENABLED(PREHEAT_BEFORE_PROBING)
   #define PROBING_NOZZLE_TEMP 170   // (°C) Only applies to E0 at this time
-  #define PROBING_BED_TEMP     0
+  #define PROBING_BED_TEMP     40
 #endif
+#define PROBING_NOZZLE_TEMP 170   // (°C) Only applies to E0 at this time
+#define PROBING_BED_TEMP     40
 
 // For Inverting Stepper Enable Pins (Active Low) use 0, Non Inverting (Active High) use 1
 // :{ 0:'Low', 1:'High' }
@@ -2711,16 +2713,19 @@
 //
 #define TOUCH_SCREEN
 #if ENABLED(TOUCH_SCREEN)
-  #define BUTTON_DELAY_EDIT  50 // (ms) Button repeat delay for edit screens
-  #define BUTTON_DELAY_MENU 250 // (ms) Button repeat delay for menus
+  #define BUTTON_DELAY_EDIT      50 // (ms) Button repeat delay for edit screens
+  #define BUTTON_DELAY_MENU     250 // (ms) Button repeat delay for menus
+
+  //#define DISABLE_ENCODER         // Disable the click encoder, if any
+  //#define TOUCH_IDLE_SLEEP_MINS 5 // (minutes) Display Sleep after a period of inactivity. Set with M255 S.
 
   #define TOUCH_SCREEN_CALIBRATION
 
-  #define TOUCH_CALIBRATION_X 12316
-  #define TOUCH_CALIBRATION_Y -9203
-  #define TOUCH_OFFSET_X        -35
-  #define TOUCH_OFFSET_Y        264
-  #define TOUCH_ORIENTATION TOUCH_LANDSCAPE
+  //#define TOUCH_CALIBRATION_X 12316
+  //#define TOUCH_CALIBRATION_Y -8981
+  //#define TOUCH_OFFSET_X        -43
+  //#define TOUCH_OFFSET_Y        257
+  //#define TOUCH_ORIENTATION TOUCH_LANDSCAPE
 
   #if BOTH(TOUCH_SCREEN_CALIBRATION, EEPROM_SETTINGS)
     #define TOUCH_CALIBRATION_AUTO_SAVE // Auto save successful calibration values to EEPROM
@@ -2728,7 +2733,6 @@
 
   #if ENABLED(TFT_COLOR_UI)
     //#define SINGLE_TOUCH_NAVIGATION
-
   #endif
 #endif
 
